@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW4U</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="./assets/logo.png" alt="PW4U Logo" class="logo">
+        </div>
+        <h1 class="title">Plan Workout For You</h1>
+    </header>
+    <div class="container">
+        <h2>Plan Your Workout</h2>
+        <label for="day-select">Select Day:</label>
+        <select id="day-select">
+            <option value="">Choose a Day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+
+        <label for="category-select">Select Muscle Group:</label>
+        <select id="category-select">
+            <option value="">Choose a Category</option>
+            <option value="Chest">Chest</option>
+            <option value="Shoulders">Shoulders</option>
+            <option value="Triceps">Triceps</option>
+            <option value="Biceps">Biceps</option>
+            <option value="Back">Back</option>
+            <option value="Abs">Abs</option>
+            <option value="Legs">Legs</option>
+        </select>
+
+        <label for="exercise-select">Select an Exercise:</label>
+        <select id="exercise-select">
+            <option value="">Select a Category First</option>
+        </select>
+
+        <label for="sets-input">Number of Sets:</label>
+        <input type="number" id="sets-input" placeholder="Enter sets">
+
+        <label for="reps-input">Number of Reps:</label>
+        <input type="number" id="reps-input" placeholder="Enter reps">
+
+        <button id="add-exercise-btn">Add Exercise</button>
+
+        <div class="exercise-list">
+            <h3>Selected Exercises:</h3>
+            <ul id="selected-exercises-list"></ul>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+
+        <div id="exercise-container" class="exercise-container"></div>
+
+        <div class="motivational-quote" id="motivational-quote">
+            "The only bad workout is the one you didn't do."
+        </div>
+    </div>
+</body>
+</html>
