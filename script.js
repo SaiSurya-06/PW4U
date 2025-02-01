@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Incline Barbell Bench Press": "assets/Chest/Incline Barbell Bench Press.mp4",
         "Dumbbell Bench Press": "assets/Chest/Dumbbell Bench Press.mp4",
         "Cable Crossovers": "assets/Chest/Cable Crossover.mp4",
+        "": "",
         "Barbell Bench Press": "assets/Chest/Barbell Bench Press.mp4",
         "Decline Barbell Bench Press": "assets/Chest/Decline Barbell Bench Press.mp4",
         "Incline Dumbbell Bench Press": "assets/Chest/Incline Dumbbell Bench Press.mp4",
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       Shoulders: {
         "Seated Dumbbell Press": "assets/Shoulders/Seated Dumbbell Press.mp4",
         "Lateral Dumbbell Raise": "assets/Shoulders/Lateral Dumbbell Raise.mp4",
+        "": "",
         "Overhead Barbell Press": "assets/Shoulders/Overhead Barbell Press.mp4",
         "Arnold Press": "assets/Shoulders/Arnold Press.mp4",
         "Machine Shoulder Press": "assets/Shoulders/Machine Shoulder Press.mp4",
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       Triceps: {
         "Cable Tricep Pushdowns": "assets/Triceps/Cable Tricep Pushdown.mp4",
         "Single-Arm Cable Tricep Extensions": "assets/Triceps/Single-Arm Cable Tricep Extension.mp4",
+        "": "",
         "Barbell Overhead Tricep Extension": "assets/Triceps/Barbell Overhead Tricep Extension.mp4",
         "Reverse-Grip Cable Pushdown": "assets/Triceps/Reverse-Grip Cable Pushdown.mp4",
         "Overhead Cable Tricep Extension": "assets/Triceps/Overhead Cable Tricep Extension.mp4",
@@ -34,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Concentration Curls": "assets/Biceps/Concentration Curl.mp4",
         "EZ Bar Curls": "assets/Biceps/EZ-Bar Curl.mp4",
         "Machine Bicep Curls": "assets/Biceps/Machine Bicep Curl.mp4",
+        "": "",
         "Cross-Body Hammer Curl": "assets/Biceps/Cross-Body Hammer Curl.mp4",
         "Seated Dumbbell Curl": "assets/Biceps/Seated Dumbbell Curl.mp4",
         "Barbell Curl": "assets/Biceps/Barbell Curl.mp4",
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Seated Cable Rows": "assets/Back/Seated Cable Row.mp4",
         "Single-Arm Dumbbell Rows": "assets/Back/Single-Arm Dumbbell Row.mp4",
         "Lat Pulldowns (with a closed grip)": "assets/Back/Lat Pulldown.mp4",
+        "": "",
         "Barbell Deadlift": "assets/Back/Barbell Deadlift.mp4",
         "Dumbbell Pullover": "assets/Back/Dumbbell Pullover.mp4",
         "Incline Dumbbell Row": "assets/Back/Incline Dumbbell Row.mp4",
@@ -63,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Russian Twists": "assets/Abs/Russian Twists.mp4",
         "Mountain Climbers": "assets/Abs/Mountain Climbers.mp4",
         "Toe Touches": "assets/Abs/Toe Touches.mp4",
+        "": "",
         "Hanging Leg Raise": "assets/Abs/Hanging Leg Raise.mp4",
         "Cable Crunch": "assets/Abs/Cable Crunch.mp4",
         "Weighted Sit-ups": "assets/Abs/Weighted Sit-ups.mp4",
@@ -73,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "Leg Press": "assets/Legs/Leg Press.mp4",
         "Leg Extensions": "assets/Legs/Leg Extension Machine.mp4",
         "Calf Raises": "assets/Legs/Dumbbell Calf Raise.mp4",
+        "": "",
         "Barbell Deadlift": "assets/Legs/Barbell Deadlift.mp4",
         "Barbell Hip Thrust": "assets/Legs/Barbell Hip Thrust.mp4",
         "Dumbbell Squat": "assets/Legs/Dumbbell Squat.mp4",
@@ -93,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     let weeklyPlan = {};
   
+    // Update exercise list based on the selected category
     categorySelect.addEventListener('change', function () {
       exerciseSelect.innerHTML = '<option value="">Select an Exercise</option>';
       const selectedCategory = this.value;
@@ -106,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   
+    // Add exercise to the weekly plan
     addExerciseBtn.addEventListener('click', function () {
       const selectedDay = document.getElementById('day-select').value;
       const selectedCategory = categorySelect.value;
@@ -126,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
       displaySelectedExercises();
     });
   
+    // Display the list of selected exercises
     function displaySelectedExercises() {
       selectedExercisesList.innerHTML = "";
       for (let day in weeklyPlan) {
@@ -144,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   
+    // Handle video playback when a "Play Demo" button is clicked
     document.addEventListener('click', function (e) {
       if (e.target && e.target.classList.contains('play-video-btn')) {
         const exerciseName = e.target.getAttribute('data-exercise');
